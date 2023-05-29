@@ -1,5 +1,7 @@
 import React from 'react';
+import './nav.css'
 import { Link, useLocation } from 'react-router-dom';
+
 
 const ROUTE_NAMES = {
     "/doritos": "Doritos",
@@ -8,7 +10,7 @@ const ROUTE_NAMES = {
 };
 
 function Nav() {
-    const currentPath =  useLocation().pathname;
+    const currentPath = useLocation().pathname;
 
     //TODO: docstring
     function getRouteNameElem(routeName) {
@@ -21,7 +23,11 @@ function Nav() {
     return (
         <nav>
             {Object.keys(ROUTE_NAMES).map(route =>
-                <Link key={route} to={route}>{getRouteNameElem(route)}</Link>
+                <div className="link">
+                    <Link
+                    key={route}
+                    to={route}>{getRouteNameElem(route)}</Link>
+                </div>
             )}
         </nav>
     );

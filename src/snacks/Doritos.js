@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
 
 function Doritos() {
     return (
-        <p>The only love triangle you need in your life.</p>
+        <div>
+            <p>The only love triangle you need in your life.</p>
+            <Link to="/"> Go Back </Link>
+        </div>
     );
 }
 
